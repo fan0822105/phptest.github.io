@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>註冊會員</title>
+    <meta charset="utf-8">
+    <!--BootStrap-->
+  <link rel="stylesheet" href="class/bootstrap/css/bootstrap.min.css">
+  <!--jQuery-->
+  <script src="class/jquery.min.js"></script>
+  <script src="class/jquery-migrate.min.js"></script>
+<!--jQuery UI-->
+<link rel="stylesheet" href="class/jquery-ui/jquery-ui.min.css">
+<script src="class/jquery-ui/jquery-ui.min.js"></script>
+  <!--Font awesome-->
+  <link rel="stylesheet" href="class/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+    function check_data()
+    {
+      if (document.myForm.account.value.length == 0)
+      {
+        alert("使用者帳號一定要填寫!");
+        return false;
+      }
+      if (document.myForm.account.value.length > 10)
+      {
+        alert("使用者帳號不得超過10個字元!");
+        return false;
+      }
+      if (document.myForm.password.value.length == 0)
+      {
+        alert("使用者密碼一定要填寫!");
+        return false;
+      }
+      if (document.myForm.password.value.length > 10)
+      {
+        alert("使用者密碼不得超過10個字元!");
+        return false;
+      }
+      if (document.myForm.re_password.value.length == 0)
+      {
+        alert("密碼確認欄忘了填寫喔!");
+        return false;
+      }
+      if (document.myForm.password.value != document.myForm.re_password.value)
+      {
+        alert("密碼確認欄位與使用者密碼欄位一定要相同喔!");
+        return false;
+      }
+      if (document.myForm.name.value.length == 0)
+      {
+        alert("您一定要留下真實姓名喔!");
+        return false;
+      }
+    myForm.submit();
+     }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+  <h2>會員註冊</h2>
+  <form class="form-horizontal" action="join.php" method="post" name="myForm">
+    <div class="form-group">
+      <label class="control-label col-md-3 col-sm-9">帳號:</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" name="account" placeholder="請輸入帳號">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-md-3 col-sm-9">密碼:</label>
+      <div class="col-sm-8">
+        <input type="password" class="form-control" placeholder="請輸入密碼" name="password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-md-3 col-sm-9">姓名:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="name" placeholder="請輸入姓名">
+        </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-md-3 col-sm-9">Email:</label>
+      <div class="col-sm-8">
+        <input type="email" class="form-control" placeholder="請輸入email" name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-md-3 col-sm-9">電話:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="phone" placeholder="請輸入手機電話">
+        </div>
+      </div>
+    <div class="form-group">
+      <div class="col-sm-offset-8 col-sm-10">
+        <button class="btn btn-default" onclick="check_data()">送出</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+</body>
+</html>

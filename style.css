@@ -1,0 +1,50 @@
+body{
+ background-color: #bdbdbd;
+ font-family: 微軟正黑體;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+
+}
+
+.container{
+ background-color: white;
+}
+
+.container-fluid{
+  background-color: white;
+
+}
+
+#book_head{
+ margin-bottom: 15px;
+}
+
+#book_main{
+  min-height: 200px;
+}
+
+#book_foot{
+  background-color: rgb(51,61,101);
+  color: #fff;
+  padding: 15px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  margin: 0px 0px;
+}
+
+#welcome{
+  text-align: center;
+}
+
+#reset,#update{
+  position: relative;
+  width: 150px;
+  left: 20%;
+  margin: 10px 10px;
+}
+
+#join_btn{
+  color: white;
+}
